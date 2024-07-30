@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table01</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <table>
+    <caption>표의 제목을 만드는 caption</caption>
+    <tr>
+      <th>제목</th>
+      <td rowspan="2">01</td>
+      <td colspan="2">02</td>
+      <!-- <td colspan="">03</td> -->
+    </tr>
+    <tr>
+      <th>제목</th>
+      <!-- <td>01</td> -->
+      <td>02</td>
+      <td>03</td>
+    </tr>
+  </table>
+</body>
+</html>
