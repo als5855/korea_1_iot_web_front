@@ -6,12 +6,27 @@
   <title>table02.html</title>
   <style>
     table, tr, td {
-      border: 1px solid black;
+      border: 1px solid #ccc;
       border-collapse: collapse;
     }
   </style>
 </head>
 <body>
+  <!--  
+    문제 
+    - 테이블 구조
+      : 3행 4열의 구조
+      : 각 셀은 간단한 텍스트 데이터 포함
+        (1행 1열 ~ 3행 4열)
+      : 첫 번째 행의 첫 번째 셀
+        (오른쪽으로 두 열에 걸쳐 확장)
+      : 두 번째 행의 두 번째 셀
+        (아래로 두 행에 걸쳐 확장)
+
+    - 요구사항
+      table, tr, td 태그를 사용하여 제작
+      - colspan, rowspan 속성을 사용하여 테이블 모양 제작
+  -->
   <table>
     <tr>
       <td colspan="2">1행 1열</td>

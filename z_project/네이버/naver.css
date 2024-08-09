@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.selectContainer {
+  width: 70%;
+  position: relative;
+  right: -65%;
+}
+
+select {
+  width: 95px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.logo {
+  width: 50%;
+  color: rgb(9, 170, 92);
+  font-family: helvetica, "Apple SD Gothic Neo", sans-serif;  
+  font-family: 'SBAggroB';
+  font-size: 50px;
+  font-weight: bolder;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 108px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoinContainer {
+  border: 1px solid #333;
+  margin: 0 auto;
+}
+
+.logoinContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #c5ccd2;
+  width: 469px;
+  height: 269px;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin-top: 48px;
+}
+
+.id {
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  height: 60px;
+  padding: 27px 15px 8px;  
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #c5ccd2;
+  box-sizing: border-box;
+}
+.password {
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  height: 60px;
+  padding: 27px 15px 8px;  
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid #c5ccd2;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+.id input {
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+}
+.password input {
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+}
+
+.spanContainer {
+  width: 410px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 10px 0px;
+  color: #767678;
+}
+
+.fa-solid {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.statuse {
+  display: flex;
+  align-items: center;
+}
+
+.statuse i {
+  font-size: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+
+button {
+  width: 410px;
+  height: 50px;
+  padding: 13px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(9, 170, 92);
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+.findContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;}
+
+.find {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+img {
+  margin-top: 60px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  margin-top: 60px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 10px;
+}
+
+footer .footerLogo {
+  color:  rgb(9, 170, 92); 
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: 'SBAggroB';
+}
+
+.footerSpan{
+  color: #767678;
+}
+
+.footerSpan span{
+  color: #000;
+}

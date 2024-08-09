@@ -3,38 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>input02.html</title>
 </head>
 <body>
-  <h2>롯데자이언츠 유니폼 주문하기</h2>
+  <!-- 1. submit & reset 속성값 -->
+  <h2>택배 주문하기</h2>
   <form>
-  <label>
-    상품명
-    <input type="text">
-  </label>
-  <br />
-  <label>
-    수량
-    <input type="text">
-  </label>
-  <br />
-  <label>
-    배송날짜 지정
-    <input type="date">
-  </label>
-  <br />
-  <label>
-    배송확인 메시지 전송 이메일
-    <input type="email" />
-  </label>
-  <hr />
-  <input type="submit" value="주문하기">
-  <input type="reset" value="취소하기">
-</form>
+    <label>
+      상품명
+      <input type="text" />
+    </label>
+  
+    <br />
+    <label>
+      수량
+      <input type="text" />
+    </label>
+  
+    <br /> 
+    <label>
+      배송 날짜 지정
+      <input type="date" />
+    </label>
 
-<input type="range" value="50">
-<input type="number" min="0" max="10" step="2">
-<input type="file" />
-<input type="hidden" name="user-count" value="1">
+    <br />
+    <label>
+      배송 확인 메시지 전송 이메일
+      <input type="email" />
+    </label>
+
+    <hr />
+    <input type="submit" value="주문하기" />
+    <input type="reset" value="취소하기" />
+  </form>
+
+  <!-- 2. number & range 속성값 -->
+
+  <!-- number -->
+  <input type="number" min="0" max="10" step="2" />
+
+  <!-- range -->
+  <input type="range" value="50" />
+
+  <!-- 3. button 속성값 -->
+  <input type="button" value="버튼에 표시할 내용" />
+  
+  <!-- 4. file 속성값 -->
+  <input type="file" />
+
+  <!-- 5. hidden 속성값 -->
+  <input type="hidden" />
+  
+  <input type="hidden" name="user-count" value="1" />
 </body>
 </html>

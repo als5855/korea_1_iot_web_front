@@ -1,1 +1,1 @@
-console.log('외부 JS파일입니다.');
+console.log('외부 JS 파일입니다.');

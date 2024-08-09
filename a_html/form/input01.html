@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>input01.html</title>
+</head>
+<body>
+  <!-- 
+    input 태그의 기본 속성
+
+    - type, name, value
+
+    type 속성의 값에 따라 input 태그의 형태가 달라짐
+  -->
+  <br />
+  <br />
+  <div style="border: 1px solid #333; width: 500px; padding: 10px;" > 
+    <form>
+      <label>
+        이메일
+        <input type="email" />
+      </label>
+      <button type="submit">전송 버튼</button> <br />
+      <label>
+        전화번호
+        <input type="tell" />
+      </label><br />
+      <label>
+        검색
+        <input type="search" />
+      </label><br />
+      <label>
+        웹주소
+        <input type="url" />
+      </label><br />
+    </form>
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+  
+
+  <!-- 1. text & password 속성값 -->
+
+  <hr />
+  <label>
+    아이디
+    <input type="text" size="16" maxlength="5" placeholder="아이디를 입력해주세요." />
+  </label>
+  <br />
+  <label>
+    비밀번호
+    <input type="password" />
+  </label>
+
+  <!-- 2. email 속성값 -->
+  <br />
+  <form>
+    <label>
+      이메일
+      <input type="email" />
+    </label>
+    <button type="submit">전송 버튼</button>
+    <label>
+      전화번호
+      <input type="tell" />
+    </label>
+    <label>
+      검색
+      <input type="search" />
+    </label>
+    <label>
+      웹주소
+      <input type="url" />
+    </label>
+  </form>
+
+  <!-- 3. radio와 checkbox 속성값 -->
+  <h3>오늘 점심으로 먹고 싶은 음식은?</h3>
+  <label>
+    <input type="checkbox" value="햄버거" checked />햄버거
+  </label>
+  <label>
+    <input type="checkbox" value="된장찌개" />된장찌개
+  </label>
+  <label>
+    <input type="checkbox" value="김치찌개" checked />김치찌개
+  </label>
+  <label>
+    <input type="checkbox" value="카레" />카레
+  </label>
+  <br />
+
+  <h3>성별이 무엇입니까?</h3>
+  <label>
+    남 <input type="radio" name="gender" checked />
+  </label>
+  <label>
+    여 <input type="radio" name="gender" />
+  </label>
+  <label>
+    모름 <input type="radio" name="gender" />
+  </label>
+  
+  <br />
+  <h3>이벤트 메시지 수신 동의</h3>
+  <label>
+    동의함 <input type="radio" name="agree" checked />
+  </label>
+  <label>
+    동의 안 함 <input type="radio" name="agree" />
+  </label>
+</body>
+</html>
