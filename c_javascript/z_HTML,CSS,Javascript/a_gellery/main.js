@@ -26,13 +26,6 @@ thumbBar.addEventListener('click', (e) => {
   };
 });
 
-thumbBar.addEventListener('click', (e) => {
-  // 클릭된 요소가 이미지인 경우
-  if (e.target.tagName === 'IMG') {
-    const imgSrc = e.target.src;
-    displayedImage.src = imgSrc;
-  };
-});
 
 button.addEventListener('click', () => {
   if (button.classList.contains('dark')) {

@@ -24,3 +24,74 @@
 //  ? resolve(value): 프로미스를 이행 상태로 변경, 결과값 value 반환
 //  ? reject(error): 프로미스를 거부 상태로 변경, 에러 error 반환 
 
+const myPromise = new Promise((resolve, reject) => {
+  // 비동기로 수행될 작업을 작성
+  const condition = true;
+
+  if(condition) {
+    // 성공한 로직
+    resolve('프로미스 성공!!')
+  } else {
+    // 실패에 대한 로직
+    reject('프로미스 실패')
+  }
+});
+
+// # 4. 프로미스 메서드 사용 
+// : new Promise()를 통한 생성된 프로미스 객체 내부의 메서드
+
+// 1) .then() 
+// : 프로미스 이행시 호출: resolve를 받음
+
+// cf) 인자값 2개를 받음
+// 첫 번째: 이행, 두번째 거부
+
+// 2) .catch()
+// : 프로미스 거부 시 호출: reject를 받음(오류 관리)
+
+// 3) .finally()
+// : 성공/실패 여부와 
+myPromise
+  .then((result) => {
+  console.log(result);
+  return '다음 수행 시 필요한 데이터'
+} )
+  .then((nextResult) => {
+  console.log(nextResult);
+  return '세번째 작업'
+} )
+  .then((thirdResult) => {
+  console.log(thirdResult);
+} )
+//   .then((thirdResult) => {
+//   console.log(thirdResult);
+//   return '세번째 작업'
+// } )
+.catch((error) => {
+  console.error(error);
+})
+.finally(() => {
+  console.log('무조건 실행');
+}) 
+
+// ! 프로미스 예시 (프로미스 체이닝 & 에러 핸들링) 
+// 데이터 가져오기
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve('데이터가졍기 성공'), 3000);
+  }) //프로미스 객체 반환
+}
+
+// 데이터 처리하기
+function processData(data) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(`${data} 사용하기`), 3000);
+  }) 
+}
+
+// then, catch 필수 
+fetchData()
+.then(result => processData(result))
+.then(processResult => console.log(processReㅐㅣsult))
+.catch(error =>console.error(error))
+console.log('메인 로직의 실행 (시간이 많이 걸리지 않는 작업)');
