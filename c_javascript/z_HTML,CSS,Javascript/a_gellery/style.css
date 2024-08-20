@@ -52,6 +52,9 @@ button {
 선택자A 선택자B (띄어쓰기)
 >> 선택자B는 A내에 중첩된 자식 요소
 */
+
+
+
 .thumb-bar img {
   display: block;
   width: 20%;

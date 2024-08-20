@@ -10,7 +10,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.createElement('h1');
 
-  // 생서된 태그 조작
+  // 생성된 태그 조작
   header.textContent = '문서 객체를 동절으로 생성';
   header.setAttribute('data-custom', '사용자 정의 속성');
   header.style.color = 'white';
