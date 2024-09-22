@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div {
+      background: url('https://cdn.pixabay.com/photo/2023/08/12/13/59/cat-8185712_1280.jpg');
+      background-repeat: no-repeat;
+      width: 1000px;
+      height: 600px;
+      border: 10px solid #666;
+      margin-bottom: 40px;
+      margin: 0 auto;
+      float: left;
+    }
+    .bg1 {
+      background-size: 200px;
+    }
+    .bg2 {
+      background-size: auto;
+    }
+    .bg3 {
+      background-size: 50%;
+    }
+    .bg4{
+      background-size: 100% 100%;
+    }
+    .bg5{
+      background-size: contain;
+    }
+    .bg6{
+      background-size: cover;
+    }
+
+    #container {
+      width: 3000px;
+      height: 3000px;
+      border: none;
+      margin: 50% auto;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="bg1 div"></div>
+    <div class="bg2 div"></div>
+    <div class="bg3 div"></div>
+    <div class="bg4 div"></div>
+    <div class="bg5 div"></div>
+    <div class="bg6 div"></div>
+  </div>
+</body>
+</html>

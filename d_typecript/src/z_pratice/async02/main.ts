@@ -41,7 +41,7 @@ async function fetchPhotos(page: number) {
 
     const photos: Photo[] = await response.json();
 
-    // splice(시작인덱스, 끝인덱스)
+    // slice(시작인덱스, 끝인덱스)
     // : 배열 메서드, 특정 부분을 새로운 배열로 반환
     // 시작인덱스 <= x < 끝인덱스
 
@@ -56,7 +56,6 @@ async function fetchPhotos(page: number) {
     // 1 * 4, 2 * 4 >> 4 ~ 7
 
     return photos.slice((page - 1) * photoPerPage, page * photoPerPage);
-
   } catch (error) {
     console.error('Failed');
     return [];
@@ -99,8 +98,6 @@ document.getElementById('next-button')!.addEventListener('click', () => {
   currentPage++;
   updatePhotos();
 });
-
-
 
 // 다음 버튼 이벤트
 

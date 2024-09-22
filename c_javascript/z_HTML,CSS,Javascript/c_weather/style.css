@@ -122,20 +122,27 @@ label {
   padding-bottom: 8px;
 }
 
-.ulContainer {
+#ulContainer {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   box-sizing: border-box;
 }
 
-ul {
+#ulContainer > ul {
   display: flex;
   list-style: none;
   justify-content: space-between;
   font-size: 24px;
   font-weight: 700;
   padding: 0px 10px; 
+}
+
+#ulContainer li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .toggle-box {

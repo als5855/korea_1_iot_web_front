@@ -1,0 +1,40 @@
+접근제한자(Access Modifiers)
+- public: 어디서든 접근이 가능하다.
+- protected: 같은 패키지 내부 또는 상속관계의 클래스 내부에 접근이 가능하다.
+- default: 같은 패키지 내에서만 접근이 가능하다.
+- private: 한 클래스 내부에서만 접근이 가능하다.
+
+기본적인 형태는
+접근 제한자  class 클래스명{ } 이다.
+	
+static
+- static 변수: 
+- static 메서드: 
+
+final
+- final 변수:
+- final 메서드:
+- final 클래스:
+
+abstract
+abstract 클래스: 추상클래스로 미완성된 클래스를 의미한다. 다른 클래스에서 속성과 메서드를 받아와야한다.
+abstract 메서드: 추상 메서드는 메서드가 선언은 되어있지만 구현부가 비워져있는 메서드이다.
+
+extends VS implements
+extends: 확장을 의미하며 상속을 구현할 때 사용한다. 
+부모클래스로 부터 자식클래에게 속성, 메서드를 상속시킨다. 
+기본 형태는 class 자식클래스명 extends 부모클래스명{} 이다.
+implements: 
+
+super VS this
+this: 클래스 생성자에서 받아온 속성과 이름이 같을 때 구분을 위해 받아온 속성 앞에 넣어 표시한다. 
+super: 부모클래스에서 받아온 속성에 사용한다.  
+
+오버로딩(Overloading) vs 오버라이딩(Overriding)
+오버로딩: 
+오버라이딩: 한 클래스 내부에서 동일안 이름의 메서드를 여러번 사용을 하는 경우
+
+try-catch-finally
+try: 
+catch: 
+finally: 

@@ -16,3 +16,30 @@
 - .fancy-border가 적용된 모든 요소는 border를 2px dashed red로 설정
 - .fancy-border 요소에는 padding을 10px, margin을 20px, 그리고 border-radius를 5px로 설정
 */
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: navy;
+}
+
+.custom-list {
+  list-style: square;
+}
+
+.data-table, th, td {
+  border: 1px solid #666;
+  border-collapse: collapse;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.fancy-border {
+  border: 2px dashed red;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 9px #666;
+}
+
+

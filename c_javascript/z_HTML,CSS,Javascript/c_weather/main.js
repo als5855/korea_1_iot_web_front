@@ -2,10 +2,16 @@
 
 const city = "Seoul";
 // >> input창에서 입력받을 경우 capitalize 사용
+// const apikey = "b3d2a174bd0bf979992c01994dd21eea";
 const apikey = "b3d2a174bd0bf979992c01994dd21eea";
 const lang = "kr";
 
+// const api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&lang=${lang}&units=metric`;
+
 const api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&lang=${lang}&units=metric`;
+
+const ulContainer = document.getElementById('ulContainer');
+const header = document.getElementById('header');
 
 async function getWeatherData() {
     try {
@@ -16,6 +22,29 @@ async function getWeatherData() {
         const data = await response.json();
         console.log(data);
         console.log(data.main.temp);
+        ulContainer.innerHTML = `
+          <ul>
+              <li>Max/Min Temp</li>
+              <li>${data.temp_max} / ${data.temp_min}</li>
+            </ul>
+            <ul>
+              <li>Humidity</li>
+              <li>${data.humidity}</li>
+            </ul>
+            <ul>
+              <li>Wind</li>
+              <li>${data.speed}</li>
+            </ul>
+            <ul>
+              <li>Cloudy</li>
+              <li>${data.all}</li>
+            </ul>
+        `;
+
+        header.innerHTML = `
+          ${data.temp} <span class="seoul">Soeul</span> 
+        `
+
     } catch (error) {
         console.error('Error:', error);
     }
@@ -106,7 +135,7 @@ const dateSpan = document.querySelector('.dateSpan');
 
 document.addEventListener('DOMContentLoaded', () => {
   // 날짜
-  let day = ['Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sundday'];
+  let day = ['Sunday', 'Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
   
     let date = new Date();
@@ -116,17 +145,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
   // dark screen
-  const toggle = document.querySelector('.toggle-box');
+  const button = document.querySelector('.toggle');
   const overlay = document.querySelector('.dark');
 
-  toggle.addEventListener('click', () => {
-      if(toggle.classList.contains('toggle')) {
-        overlay.style.display = 'block'
-        toggle.classList.remove('toggle');
-        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+  button.addEventListener('click', () => {
+      if(button.classList.contains('toggle')) {
+        button.textContent = 'Lighten';
+        overlay.style.display = block;
+        overlay.style.backgroundColor= 'rgba(0, 0, 0, 0.5)';
+        button.classList.remove('toggle');
       } else {
-        toggle.style.display = 'block'
+        button.textContent = 'Darken';
         overlay.style.display = 'none';
-        toggle.classList.add('toggle');
+        button.classList.add('toggle');
       }
 })
